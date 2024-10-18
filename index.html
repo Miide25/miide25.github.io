@@ -85,8 +85,8 @@
         
           <div class="services-box">
             <i class="fa-brands fa-android"></i>
-            <h3>App Development</h3>
-            <p>As an app developer specializing in frontend development,I specialize in crafting custom mobile applications for individuals and Companies. From concept to deployment, I ensure your app meets your specific requirements and objectives. Whether you need an iOS, Android, or cross-platform solution, I use cutting-edge technologies to create robust and user-friendly applications that enhance your digital presence.</p>
+            <h3>Responsive web Design</h3>
+            <p>As a frontend developer with expertise in responsive web design, I specialize in creating websites that provide an optimal viewing experience across all devices. From mobile phones to desktop computers, I ensure that each website adapts seamlessly to different screen sizes and resolutions. By employing modern technologies like HTML5, CSS3, and frameworks such as Bootstrap and Tailwind, I craft clean, scalable, and user-friendly interfaces. Whether for individuals or businesses, I design responsive websites that are not only visually appealing but also fast, accessible, and tailored to enhance user engagement..</p>
              <a href="#" class="btn">Read More</a>
   </div>
 </section>
@@ -99,9 +99,9 @@
     <div class="portfolio-box">
       <img src="download.jpeg" alt="">
       <div class="portfolio-layer">
-        <h4>Web Design</h4>
-        <p>I create customized websites for individuals and companies, ensuring they are responsive and reflect your brand's identity.</p>
-        <a href="https://miide25.github.io/Olaoluwa-Paul/"><i class="fa-solid  fa-up-right-from-square"></i></a>
+        <h4> Movie Website Design</h4>
+        <p>I create customized movie websites for individuals, filmmakers, and entertainment companies, ensuring they are fully responsive and tailored to reflect your unique brand and vision. Whether you're showcasing a collection of films</p>
+        <a href="https://tonify-sandy.vercel.app/"><i class="fa-solid  fa-up-right-from-square"></i></a>
       </div>
     </div>
 
@@ -109,9 +109,9 @@
       <div class="portfolio-box">
         <img src="download (1).jpeg" alt="">
         <div class="portfolio-layer">
-          <h4>Mobile App Development with React Native</h4>
-          <p>I develop custom mobile apps using React Native, delivering cross-platform solutions that are efficient and tailored to your business needs</p>
-          <a href="https://miide25.github.io/AA/"><i class="fa-solid  fa-up-right-from-square"></i></a>
+          <h4> Advanced Typing Test </h4>
+          <p>I create advanced typing speed test applications using HTML, CSS, and JavaScript. These tests feature real-time feedback, WPM calculation, and accuracy tracking, all within a responsive, user-friendly interface. Whether for personal use, education, or training, my apps deliver smooth performance and customizable options, enhancing user engagement without relying on external frameworks.</p>
+          <a href="https://miide25.github.io/Type/"><i class="fa-solid  fa-up-right-from-square"></i></a>
         </div>
       </div>
 
@@ -119,39 +119,14 @@
         <div class="portfolio-box">
           <img src="download (2).jpeg" alt="">
           <div class="portfolio-layer">
-            <h4>Progressive Web App</h4>
-            <p>I specialize in developing Progressive Web Apps (PWAs) that combine the best features of web and mobile applications for a seamless user experience across all devices.</p>
-            <i class="fa-solid  fa-up-right-from-square"></i>
+            <h4>Memes Generator</h4>
+            <p>Create custom memes with ease using my Meme Generator. Upload images, add text, and style your memes in a user-friendly interface that works seamlessly across all devices. Perfect for personal use, marketing, or social media, it offers a creative and engaging experience for all users.</p>
+            <a href ="https://miide25.github.io/Memes-Generator/"><i class="fa-solid  fa-up-right-from-square"></i></a>
           </div>
         </div>
 
         
-          <div class="portfolio-box">
-            <img src="download (3).jpeg" alt="">
-            <div class="portfolio-layer">
-              <h4>Browser Extensions</h4>
-              <p>I specialize in developing custom browser extensions tailored to enhance user experience and functionality.</p>
-              <i class="fa-solid  fa-up-right-from-square"></i>
-            </div>
-          </div>
-
-            <div class="portfolio-box">
-              <img src="download (4).jpeg" alt="">
-              <div class="portfolio-layer">
-                <h4>Interactive Infographics</h4>
-                <p>I specialize in designing engaging interactive infographics that effectively convey complex information and captivate audiences.</p>
-                <i class="fa-solid  fa-up-right-from-square"></i>
-              </div>
-            </div>
-
-              <div class="portfolio-box">
-                <img src="download (5).jpeg" alt="">
-                <div class="portfolio-layer">
-                  <h4>Interactive Games</h4>
-                  <p>I specialize in creating engaging interactive games, tailored for individual enjoyment and entertainment.</p>
-                  <i class="fa-solid  fa-up-right-from-square"></i>
-                </div>
-              </div>
+         
   </div>
 </section>
 
@@ -179,7 +154,7 @@
 
 <footer class="footer">
   <div class="footer-text">
-    <p>Copyright &copy; 2024 by @Olaoluwa Paul | All Rights Reserved.</p>
+    <p>Copyright &copy; 2024 by Olaoluwa Paul | All Rights Reserved.</p>
   </div>
 
   <div class="footer-iconTop">
@@ -194,6 +169,76 @@
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
 <!--MAIN JS -->
-  <script src="JS/main.js"></script>
+  <script>
+ /*===================== toggle icon navbar =====================*/
+
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+
+menuIcon.onclick = () => {
+    menuIcon.classList.toggle('fa-xmark'); // Corrected typo
+    navbar.classList.toggle('active');
+}
+
+/*===================== scroll section active link =====================*/
+
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
+
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id'); // Added quotes around 'id'
+
+        if (top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+            });
+        }
+    });
+
+    /*===================== sticky navbar =====================*/
+    let header = document.querySelector('header');
+    header.classList.toggle('sticky', window.scrollY > 100);
+
+    /*===================== remove toggle icon and navbar on click =====================*/
+    menuIcon.classList.remove('fa-xmark');
+    navbar.classList.remove('active');
+};
+
+/*===================== scroll reveal =====================*/
+// Initialize ScrollReveal
+ScrollReveal({
+    distance: '80px',
+    duration: 2000,
+    delay: 200,
+    reset: true,  // This will reset the animation every time it scrolls into view
+});
+
+// Apply ScrollReveal to the sections and content
+ScrollReveal().reveal('.home-content', { origin: 'top' });
+ScrollReveal().reveal('.home-img', { origin: 'bottom' });
+ScrollReveal().reveal('.services-container', { origin: 'bottom' });
+ScrollReveal().reveal('.portfolio-box', { origin: 'bottom' });
+ScrollReveal().reveal('.contact form', { origin: 'bottom' });
+ScrollReveal().reveal('.heading', { origin: 'top' });
+ScrollReveal().reveal('.about-content', { origin: 'right' });
+ScrollReveal().reveal('.about img', { origin: 'left' });
+
+/*============================ typed js ============================*/
+const typed = new Typed('.multiple-text', {
+    strings: ['Frontend Developer', 'Web Designer', 'UI/UX Designer'],
+    typeSpeed: 70,
+    backSpeed: 70,
+    backDelay: 1000,
+    loop: true,
+});
+
+
+
+  </script>
 </body>
 </html>
