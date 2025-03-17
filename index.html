@@ -1,246 +1,362 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
-        <title>My Portfolio</title>
-        <meta name="viewport" content="width-device-width,initial-scale=1.0"/>
+    <title>Cosmic Portfolio | Space Explorer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Space-themed Developer Portfolio">
 
-        <!-- FONT AWESOME -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <!-- MAIN CSS -->
-       <link rel="stylesheet" href="styl.css">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="styl.css">
 </head>
 <body>
-<!--HEADER DESIGN -->
-<header class="header">
-  <a href="#" class="logo">Portfolio</a>
-
-  <i class="fa-sharp fa-solid fa-bars" id="menu-icon"></i>
-
-
-  <nav class="navbar">
-  <a href="#home" class="active">Home</a>
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#portfolio">Portfolio</a>
-  <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<!--HEADER DESIGN -->
-<section class="home" id="home">
-  <div class="home-content">
-    <h3>Hi,I'm</h3>
-    <h1>Olaoluwa paul</h1>
-    <h3>And i'm a<span> Frontend Developer</span></h3>
-    <p>As a front-end developer, I am passionate about creating visually appealing and user-friendly web applications. I specialize in HTML, CSS, and JavaScript, with a strong focus on modern frameworks like ReactJS. My goal is to deliver high-performance, scalable solutions while continuously learning and staying updated with the latest industry trends. Through hands-on projects, advanced courses, and community contributions, I strive to enhance my skills and make a meaningful impact in the tech world.</p>
-    <div class="social-media">
-      <a href="https://web.facebook.com/profile.php?id=100083546310820"><i class="fa-brands fa-facebook"></i></a>
-      <a href="https://x.com/HorlexMide"><i class="fa-brands fa-twitter"></i></a>
-      <a href="https://www.instagram.com/mide_xm/?next=%2F#"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/olaoluwa-paul-19b187282/overlay/about-this-profile/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3Brtm6OSJuROG3oWi71jqYvA%3D%3D"><i class="fa-brands fa-linkedin"></i></a>
-    </div>
-    <a href="DOC-20240706-WA004.pdf" class="btn">Download CV</a>
-  </div>
-
-  <div class="home img"></div>
-  <img src="IMG-20230814-WA0005.jpg" alt="my picture">
-</section>
-
-
-<!--ABOUT SECTION DESIGN -->
-<section class="about" id="about">
-  <div class="about" id="about">
-    <img src="IMG-20230814-WA0005.jpg" alt="">
-  </div>
-
-  <div class="about-content">
-    <h2 class="heading">About <SPAN>Me</SPAN></h2>
-    <h3>Frontend Developer</h3>
-    <p>As a front-end developer, I am passionate about creating dynamic, user-friendly web experiences. I specialize in HTML, CSS, and JavaScript, with a strong focus on ReactJS. My goal is to build responsive, accessible, and visually appealing websites and applications. I continually seek to enhance my skills by learning advanced techniques and exploring new technologies. By contributing to open-source projects and collaborating with the developer community, I aim to stay at the forefront of the ever-evolving web development landscape.</p>
-    <a href="#" class="btn">Read more</a>
-  </div>
-</section>
-
-<!--SERVICE SECTION DESIGN -->
-<section class="services" id="services">
-  <h2 class="heading">My <span>Services</span></h2>
-
-  <div class="services-container">
-    <div class="services-box">
-      <i class="fa-solid fa-code"></i>
-      <h3>Web Development</h3>
-      <p>As a front-end developer, I specialize in designing and developing customized websites for individuals and Companies. From initial concept to final launch, I ensure your website reflects your brand identity and meets your functional requirements. Whether you need a static website, dynamic web application, or e-commerce platform, I utilize the latest web technologies to deliver responsive, fast-loading, and SEO-friendly solutions that elevate your online presence.</p>
-       <a href="#" class="btn">Read More</a>
+    <!-- STARS BACKGROUND -->
+    <div class="stars-container">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
     </div>
 
-    
-      <div class="services-box">
-        <i class="fa-solid fa-palette"></i>
-        <h3>UI/UX Designing</h3>
-        <p>As a front-end developer with a passion for UI/UX design, I specialize in creating intuitive and visually appealing user interfaces (UI) and seamless user experiences (UX). Whether you're launching a new product or refining an existing application, I focus on understanding user behaviors and preferences to design interfaces that are not only aesthetically pleasing but also highly functional. From wireframing to prototyping, I ensure your digital products engage users and achieve your business goals effectively.</p>
-         <a href="#" class="btn">Read More</a>
-      </div>
+    <!-- HEADER DESIGN -->
+    <header class="header">
+        <a href="#" class="logo">Frontend<span>DEV</span></a>
 
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
         
-          <div class="services-box">
-            <i class="fa-brands fa-android"></i>
-            <h3>Responsive web Design</h3>
-            <p>As a frontend developer with expertise in responsive web design, I specialize in creating websites that provide an optimal viewing experience across all devices. From mobile phones to desktop computers, I ensure that each website adapts seamlessly to different screen sizes and resolutions. By employing modern technologies like HTML5, CSS3, and frameworks such as Bootstrap and Tailwind, I craft clean, scalable, and user-friendly interfaces. Whether for individuals or businesses, I design responsive websites that are not only visually appealing but also fast, accessible, and tailored to enhance user engagement..</p>
-             <a href="#" class="btn">Read More</a>
-  </div>
-</section>
+        <a href="https://github.com/Miide25?tab=repositories" target="_blank" class="github-icon" aria-label="View my GitHub profile">
+            <i class="fa-brands fa-github"></i>
+        </a>
+    </header>
 
-<!--PORTFOLIO SECTION DESIGN -->
-<section class="portfolio" id="portfolio">
-  <h2 class="heading">Latest <span>Projects</span></h2>
-
-  <div class="portfolio-container">
-    <div class="portfolio-box">
-      <img src="download.jpeg" alt="">
-      <div class="portfolio-layer">
-        <h4> Movie Website Design</h4>
-        <p>I create customized movie websites for individuals, filmmakers, and entertainment companies, ensuring they are fully responsive and tailored to reflect your unique brand and vision. Whether you're showcasing a collection of films</p>
-        <a href="https://tonify-sandy.vercel.app/"><i class="fa-solid  fa-up-right-from-square"></i></a>
-      </div>
-    </div>
-
-    
-      <div class="portfolio-box">
-        <img src="download (1).jpeg" alt="">
-        <div class="portfolio-layer">
-          <h4> Advanced Typing Test </h4>
-          <p>I create advanced typing speed test applications using HTML, CSS, and JavaScript. These tests feature real-time feedback, WPM calculation, and accuracy tracking, all within a responsive, user-friendly interface. Whether for personal use, education, or training, my apps deliver smooth performance and customizable options, enhancing user engagement without relying on external frameworks.</p>
-          <a href="https://miide25.github.io/Type/"><i class="fa-solid  fa-up-right-from-square"></i></a>
-        </div>
-      </div>
-
-      
-        <div class="portfolio-box">
-          <img src="download (2).jpeg" alt="">
-          <div class="portfolio-layer">
-            <h4>Memes Generator</h4>
-            <p>Create custom memes with ease using my Meme Generator. Upload images, add text, and style your memes in a user-friendly interface that works seamlessly across all devices. Perfect for personal use, marketing, or social media, it offers a creative and engaging experience for all users.</p>
-            <a href ="https://miide25.github.io/Memes-Generator/"><i class="fa-solid  fa-up-right-from-square"></i></a>
-          </div>
+    <!-- HOME SECTION DESIGN -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Welcome to my universe</h3>
+            <h1>I'm <span class="gradient-text">Olaoluwa Paul</span></h1>
+            <h3>Exploring the cosmos as a <span class="multiple-text">Frontend Developer</span></h3>
+            <p>Navigating the digital universe with code as my spacecraft. I create stellar web experiences that transcend ordinary design, focusing on performance, accessibility, and user engagement that's out of this world.</p>
+            
+            <div class="social-media">
+                <a href="https://x.com/Miide26?t=6GUaSFrVm8gvrc8E1it7Xg&s=09 " class="glow-icon"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/olaoluwa-paul-19b187282?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="glow-icon"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            
+            <a href="My cv.pdf" class="btn">Download CV <i class="fa-solid fa-download"></i></a>
         </div>
 
+        <div class="home-img">
+            <div class="orbit-container">
+                <div class="planet"></div>
+                <div class="orbit">
+                    <div class="satellite"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION DESIGN -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <div class="astronaut-container">
+                <img src="https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?q=80&w=1974&auto=format&fit=crop" alt="Astronaut floating in space" class="astronaut">
+                <div class="glow-effect"></div>
+            </div>
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Space Explorer & Code Navigator</h3>
+            <p>As a digital astronaut exploring the vast universe of web development, I've mastered the cosmic forces of HTML, CSS,JavaScript, React and Tailwind . My mission is to create websites that feel like journeys through space - immersive, awe-inspiring, and unforgettable. With each project, I push the boundaries of what's possible, venturing into uncharted territories of design and functionality. Join me on this interstellar adventure as we transform your ideas into digital constellations that shine brightly across the internet galaxy.</p>
+            <a href="#" class="btn">Mission Details <i class="fa-solid fa-rocket"></i></a>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION DESIGN -->
+    <section class="services" id="services">
+        <h2 class="heading">My <span>Services</span></h2>
+
+        <div class="services-container">
+            <div class="services-box">
+                <i class="fa-solid fa-code"></i>
+                <div class="glow-line"></div>
+                <h3>Stellar Web Development</h3>
+                <p>Creating cosmic websites that orbit perfectly around your brand's universe. From nebulous concepts to fully-formed digital planets, I craft responsive, fast-loading web experiences that gravitate users toward your content.</p>
+                <a href="#" class="btn">Explore <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="services-box">
+                <i class="fa-solid fa-palette"></i>
+                <div class="glow-line"></div>
+                <h3>Galactic UI/UX Design</h3>
+                <p>Designing interfaces that feel like journeys through space - intuitive navigation systems and visual experiences that transport users across your digital galaxy with ease and wonder.</p>
+                <a href="#" class="btn">Explore <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="services-box">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <div class="glow-line"></div>
+                <h3>Interplanetary Responsiveness</h3>
+                <p>Ensuring your digital presence adapts seamlessly across all devices in the universe - from handheld communicators to massive command center displays, your site will maintain perfect form throughout the cosmos.</p>
+                <a href="#" class="btn">Explore <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION DESIGN -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Stellar <span>Projects</span></h2>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=2070&auto=format&fit=crop" alt="Cosmic Movie Platform">
+                <div class="portfolio-layer">
+                    <h4>Nebula Stream</h4>
+                    <p>A cinematic universe at your fingertips. This streaming platform brings the stars of film directly to your screen with a UI that feels like floating through space.</p>
+                    <a href="https://tonify-sandy.vercel.app/" class="glow-icon"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=2022&auto=format&fit=crop" alt="Galaxy Typing Test">
+                <div class="portfolio-layer">
+                    <h4>Cosmic Type</h4>
+                    <p>Test your light-speed typing abilities with this interactive application. Watch as your keystrokes create constellations across the screen.</p>
+                    <a href="https://miide25.github.io/Type/" class="glow-icon"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?q=80&w=2080&auto=format&fit=crop" alt="Stellar Meme Generator">
+                <div class="portfolio-layer">
+                    <h4>Astro Memes</h4>
+                    <p>Create interstellar humor with this meme generator that lets you add cosmic effects and space-themed elements to your favorite images.</p>
+                    <a href="https://miide25.github.io/Memes-Generator/" class="glow-icon"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
         
-         
-  </div>
-</section>
+        <div class="github-projects">
+            <div class="github-projects-content">
+                <h3>Explore the Full Galaxy</h3>
+                <p>Discover more cosmic creations and interstellar projects in my GitHub repository.</p>
+                <a href="https://github.com/Miide25?tab=repositories" target="_blank" class="btn">
+                    <i class="fa-brands fa-github"></i> View All Projects on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
 
-<!--CONTACT SECTION DESIGN -->
-<section class="contact" id="contact">
- <h2 class="heading">Contact <span>Me</span></h2>
+    <!-- CONTACT SECTION DESIGN -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Mission Control</span></h2>
 
-<form action="https://submit-form.com/oMm7x83W6">
-  <div class="input-box">
-    <input type="text" id="name" name="name" placeholder="Full Name" required />
-    <input type="email" id="email" name="email" placeholder="Email Address" required />
-  </div>
+        <form action="https://submit-form.com/oMm7x83W6" class="contact-form">
+            <div class="input-box">
+                <input type="text" placeholder="Commander Name" required>
+                <input type="email" placeholder="Communication Frequency (Email)" required>
+            </div>
 
-  <div class="input-box">
-    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required />
-    <input type="text" id="subject" name="subject" placeholder="Email Subject" required />
-  </div>
+            <div class="input-box">
+                <input type="tel" placeholder="Transmission Code (Phone)" required>
+                <input type="text" placeholder="Mission Subject" required>
+            </div>
 
-  <textarea id="message" name="message" placeholder="Your Message" cols="30" rows="10" required></textarea>
-  
-  <input type="submit" value="Send Message" class="btn" />
-</form>
-</section>
+            <textarea placeholder="Your Message to Mission Control" cols="30" rows="10" required></textarea>
+            
+            <button type="submit" class="btn">Transmit Message <i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+    </section>
 
+    <!-- FOOTER SECTION DESIGN -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>© <span id="current-year">2024</span> Cosmic Portfolio | All Rights Reserved Across the Universe</p>
+        </div>
 
-<!--FOOTER SECTION DESIGN -->
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fa-solid fa-rocket"></i></a>
+        </div>
+    </footer>
 
-<footer class="footer">
-  <div class="footer-text">
-    <p>Copyright &copy; 2024 by Olaoluwa Paul | All Rights Reserved.</p>
-  </div>
+    <!-- SCROLL REVEAL JS -->
+    <script src="https://unpkg.com/scrollreveal@4.1.1/dist/scrollreveal.min.js"></script>
 
-  <div class="footer-iconTop">
-    <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
-  </div>
-</footer>
+    <!-- TYPED JS -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
-<!--SCROLL REVEAL JS -->
-<script src="https://unpkg.com/scrollreveal"></script>
+    <!-- MAIN JS -->
+    <script>
+// Wait for DOM to be fully loaded
+document.addEventListener("DOMContentLoaded", () => {
+  /*===================== toggle icon navbar =====================*/
+  const menuIcon = document.querySelector("#menu-icon")
+  const navbar = document.querySelector(".navbar")
 
-<!--TYPED JS -->
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  // Check if elements exist to prevent errors
+  if (menuIcon && navbar) {
+    menuIcon.addEventListener("click", () => {
+      menuIcon.classList.toggle("fa-xmark")
+      menuIcon.classList.toggle("fa-bars")
+      navbar.classList.toggle("active")
+    })
+  }
 
-<!--MAIN JS -->
-  <script>
- /*===================== toggle icon navbar =====================*/
+  /*===================== scroll section active link =====================*/
+  const sections = document.querySelectorAll("section")
+  const navLinks = document.querySelectorAll("header nav a")
 
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+  function handleScroll() {
+    const scrollY = window.scrollY
 
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('fa-xmark'); // Corrected typo
-    navbar.classList.toggle('active');
-}
+    // Active link update
+    sections.forEach((sec) => {
+      const offset = sec.offsetTop - 150
+      const height = sec.offsetHeight
+      const id = sec.getAttribute("id")
 
-/*===================== scroll section active link =====================*/
+      if (scrollY >= offset && scrollY < offset + height) {
+        navLinks.forEach((link) => {
+          link.classList.remove("active")
+        })
+        document.querySelector(`header nav a[href="#${id}"]`).classList.add("active")
+      }
+    })
 
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
+    // Sticky navbar
+    const header = document.querySelector(".header")
+    if (header) {
+      header.classList.toggle("sticky", scrollY > 100)
+    }
+  }
 
-window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id'); // Added quotes around 'id'
+  window.addEventListener("scroll", handleScroll)
 
-        if (top >= offset && top < offset + height) {
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
-            });
-        }
-    });
+  // Close menu when clicking on a nav link
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      menuIcon.classList.remove("fa-xmark")
+      menuIcon.classList.add("fa-bars")
+      navbar.classList.remove("active")
+    })
+  })
 
-    /*===================== sticky navbar =====================*/
-    let header = document.querySelector('header');
-    header.classList.toggle('sticky', window.scrollY > 100);
+  /*===================== scroll reveal =====================*/
+  // Make sure ScrollReveal is available globally
+  if (typeof ScrollReveal === "function") {
+    const sr = ScrollReveal({
+      origin: "top",
+      distance: "80px",
+      duration: 2000,
+      delay: 200,
+      reset: true,
+    })
 
-    /*===================== remove toggle icon and navbar on click =====================*/
-    menuIcon.classList.remove('fa-xmark');
-    navbar.classList.remove('active');
-};
+    sr.reveal(".home-content", {})
+    sr.reveal(".orbit-container", { origin: "bottom", delay: 300 })
+    sr.reveal(".astronaut-container", { origin: "left", delay: 300 })
+    sr.reveal(".about-content", { origin: "right", delay: 300 })
+    sr.reveal(".heading", { delay: 100 })
+    sr.reveal(".services-box", { interval: 200 })
+    sr.reveal(".portfolio-box", { interval: 200 })
+    sr.reveal(".contact-form", { origin: "bottom", delay: 300 })
+  } else {
+    console.error("ScrollReveal is not defined. Make sure the library is loaded properly.")
+  }
 
-/*===================== scroll reveal =====================*/
-// Initialize ScrollReveal
-ScrollReveal({
-    distance: '80px',
-    duration: 2000,
-    delay: 200,
-    reset: true,  // This will reset the animation every time it scrolls into view
-});
+  /*===================== typed js =====================*/
+  // Make sure Typed is available globally
+  if (typeof Typed === "function") {
+    const typed = new Typed(".multiple-text", {
+      strings: ["Frontend Developer", "Responsive web Designer", "Code Explorer"],
+      typeSpeed: 70,
+      backSpeed: 70,
+      backDelay: 1000,
+      loop: true,
+    })
+  } else {
+    console.error("Typed is not defined. Make sure the library is loaded properly.")
+  }
 
-// Apply ScrollReveal to the sections and content
-ScrollReveal().reveal('.home-content', { origin: 'top' });
-ScrollReveal().reveal('.home-img', { origin: 'bottom' });
-ScrollReveal().reveal('.services-container', { origin: 'bottom' });
-ScrollReveal().reveal('.portfolio-box', { origin: 'bottom' });
-ScrollReveal().reveal('.contact form', { origin: 'bottom' });
-ScrollReveal().reveal('.heading', { origin: 'top' });
-ScrollReveal().reveal('.about-content', { origin: 'right' });
-ScrollReveal().reveal('.about img', { origin: 'left' });
+  // Update copyright year
+  const yearElement = document.getElementById("current-year")
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear()
+  }
 
-/*============================ typed js ============================*/
-const typed = new Typed('.multiple-text', {
-    strings: ['Frontend Developer', 'Web Designer', 'UI/UX Designer'],
-    typeSpeed: 70,
-    backSpeed: 70,
-    backDelay: 1000,
-    loop: true,
-});
+  // Add smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault()
 
+      const targetId = this.getAttribute("href")
+      const targetElement = document.querySelector(targetId)
 
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 70,
+          behavior: "smooth",
+        })
+      }
+    })
+  })
 
-  </script>
+  // Add parallax effect to stars
+  window.addEventListener("mousemove", (e) => {
+    const stars = document.querySelectorAll("#stars, #stars2, #stars3")
+    const x = e.clientX / window.innerWidth
+    const y = e.clientY / window.innerHeight
+
+    stars.forEach((star) => {
+      const speed = star.id === "stars" ? 5 : star.id === "stars2" ? 10 : 15
+      const offsetX = (x - 0.5) * speed
+      const offsetY = (y - 0.5) * speed
+
+      star.style.transform = `translateX(${offsetX}px) translateY(${offsetY}px)`
+    })
+  })
+
+  // GitHub icon hover effect
+  const githubIcon = document.querySelector(".github-icon")
+  if (githubIcon) {
+    githubIcon.addEventListener("mouseenter", () => {
+      githubIcon.innerHTML = '<i class="fa-brands fa-github-alt"></i>'
+    })
+
+    githubIcon.addEventListener("mouseleave", () => {
+      githubIcon.innerHTML = '<i class="fa-brands fa-github"></i>'
+    })
+  }
+
+  // Add ScrollReveal for GitHub projects section
+  if (typeof ScrollReveal === "function") {
+    const sr = ScrollReveal({
+      origin: "bottom",
+      distance: "60px",
+      duration: "2500",
+      delay: "400",
+      reset: true,
+    })
+
+    sr.reveal(".github-projects", {})
+  }
+})
+    </script>
 </body>
 </html>
+
